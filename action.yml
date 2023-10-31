@@ -18,6 +18,10 @@ runs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
+    - name: Get shared .releaserc
+      shell: bash
+      run: curl -o .releaserc https://raw.githubusercontent.com/pedrobgodoy/release-action-test-2/main/.releaserc
+
     - name: Install Dependencies
       shell: bash
       run: npm ci
